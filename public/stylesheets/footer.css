@@ -1,0 +1,12 @@
+.footer{
+  margin: 0.5em;
+  margin-top: 1em;
+  text-align:right;
+  text-size: 90%;
+  color: #f0f0f0;
+}
+
+/* Print Only */
+@media print {
+.footer {display:none !important;}
+}

@@ -1,0 +1,33 @@
+#document{
+  position:relative;
+  padding: 1em;
+  width:75%;
+  min-width:5in;
+  border-radius: 5px;
+  margin: 0 auto;
+  box-shadow: inset 0 0 10px #000000;
+  background-color: #f0f0f0; color: #333;
+}
+h1[itemprop="name"]{
+  font-family: lucidia, serif;
+  font-size:300%;
+  float:left;
+  text-shadow: #FFFFFF 1px 1px 0;
+}
+
+#document> :first-child{
+}
+
+.separator{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contact{
+  float:right;
+}
+
+[itemprop="email"], [itemprop="telephone"], [itemprop="url"], [itemprop="address"]{
+  display:block;
+  text-align:right;
+}

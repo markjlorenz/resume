@@ -1,0 +1,84 @@
+<div id='document'>
+  
+  <div itemscope itemtype="http://schema.org/Person">
+    <h1 itemprop="name">Mark J. Lorenz</h1>
+    <!--<img src="janedoe.jpg" itemprop="image" />-->
+
+    <div class='contact'>
+      <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <span itemprop="streetAddress">1756 Darrow Dr.</span>
+        <span itemprop="addressLocality">Powell</span>,
+        <span itemprop="addressRegion">OH</span>
+        <span itemprop="postalCode">43065</span>
+      </div>
+      <span itemprop="telephone">(614) 537-6728</span>
+      <a href="mailto:markjlorenz@gmail.com" itemprop="email">MarkJLorenz@gmail.com</a>
+      <a href="https://github.com/dapplebeforedawn" itemprop="url">On GitHub</a>
+    </div>
+    <div style='clear:both;'><!--annoying hack--></div>
+  </div>
+
+  <div class='separator'><hr /></div>
+
+  <div class='experience-section'>
+    <h3>Ruby on Rails Experience:</h2>
+    <ul>
+      <li>
+        <p>Building <%= link_to "LuxeLedger", 'http://www.luxeledger.com' %> I gained a very thorough understanding of both front-end and back-end Ruby on Rails.  The back end has some very specialized routing, nested models and has_many_through relationships.  I also took advanted of the plugin architecture of Rails to build specialized plugins to handle sales tax calculation, user generated reports and build a multitenant environment using PostgreSQL schemas.<p>
+        <p>The front-end of LuxeLedger taught me how to write semantic HTML, and work with AJAX loaded content.
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <div class='experience-section'>
+    <h3>Test Experience:</h2>
+    <ul>
+      <li>
+        <p>
+          My more recent web applications have had a strong emphasis on testing.  I use Rspec, Cucumber, Capybara and FactoryGirl to ensure that my applications work the way I want them to, even after a refactor.  
+        </p>
+        <p>The open source applications do not include any non-generated test code.  It's been a real learning experience to see all the unexpected ways an application can break when a new feature is added, or an existing one removed.  You could say I'm a school of hard knocks test devotee.  Since I don't have any open sourced test code, I love to talk about your situation, and how we'd spec and test it.</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class='experience-section'>
+    <h3>jQuery Experience:</h2>
+    <ul>
+      <li>
+        <p>LuxeLedger would not have been possible without jQuery and the jQuery UI.  Building LuxeLedger, I learned how to effective use the UI widgets, and ended up writing several custom jQuery widgets.</p> 
+        <p>LuxeLedger also takes advantage of the DOM manipulation and asyncronous javascript features of jQuery to progressively enhance the user experience.</p>
+      </li>
+    </ul>
+  </div>
+
+  <%= render 'mobile_experience' %>
+
+  <%= render 'shipped_applications' %>
+
+  <%= render 'work_and_education' %>
+
+</div>
+
+<script type="text/javascript">
+jQuery(function($){
+  $('h1').CreateBubblePopup({
+    position: 'top',
+    align: 'center',
+    innerHtml: '<img src="/images/ajax-loader.gif" style="border:0px; vertical-align:middle; margin-right:10px; display:inline;" />loading!',
+    innerHtmlStyle: { color:'#FFFFFF', 'text-align':'center' },
+    selectable: true,
+    themeName: 'azure',
+    themePath: '/images/jquerybubblepopup-theme'
+  });
+
+  // add a mouseover event for the "button" element...
+  $('h1').mouseover(function(){
+    var button = $(this);
+    $.get('/me.html', function(data) {
+      button.SetBubblePopupInnerHtml(data, true);
+    }); 
+  });
+});
+</script>
