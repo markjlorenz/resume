@@ -28,6 +28,10 @@
         <p>The front-end of LuxeLedger taught me how to write semantic HTML, and work with AJAX loaded content.
         </p>
       </li>
+      <li>
+        <p>Building <%= link_to "MessagesOnAMission", 'http://build.messagesonamission.com' %> I learned how to manage complexity when sharing data with a polyglot (Node.js in this case) application addressed at a different domain.  The Rails side of MessagesOnAMission is basically just an administration and setup page, but it needed to be able to supply data to the workhorse, Node.js application that my users would be interacting with.<p>
+        <p>An informed eye will notice that MessagesOnAMission relies heavily on <%= link_to "TwitterBootstrap", "http://twitter.github.com/bootstrap/" %> for markup and styling.  Using Bootstrap is a humbling experience, those gents know CSS far better than I every will. </p>
+      </li>
     </ul>
   </div>
 
@@ -39,6 +43,16 @@
           My more recent web applications have had a strong emphasis on testing.  I use Rspec, Cucumber, Capybara and FactoryGirl to ensure that my applications work the way I want them to, even after a refactor.  
         </p>
         <p>The open source applications do not include any non-generated test code.  It's been a real learning experience to see all the unexpected ways an application can break when a new feature is added, or an existing one removed.  You could say I'm a school of hard knocks test devotee.  Since I don't have any open sourced test code, I love to talk about your situation, and how we'd spec and test it.</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class='experience-section'>
+    <h3>Node.js, Socket.io and Express.js Experience:</h2>
+    <ul>
+      <li>
+        <p>The actual application side of MessagesOnAMission is written using Node.js, Socket.io and Express.js.  The use of these technologies showed me that javascript is way more than just jQuery, and in many ways is a language powerful enough to dethrone Ruby as my favorite language (well, almost) </p> 
+        <p>MessagesOnAMission uses a pretty novel templating system that allows users to pick from different animations, and apply them to their presentation.  Even though the animations may have different options, and layout requirements, using my templating system I can quickly add new animations.  For example, see the "fish bowl" animation, as opposed to "movie credits" animation.  All this is done without the future-fragile need to store markup specific code in the database.</p>
       </li>
     </ul>
   </div>
