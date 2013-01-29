@@ -5,3 +5,4 @@
 # Mime::Type.register_alias "text/html", :iphone
 
 ActionDispatch::ParamsParser::DEFAULT_PARSERS.delete(Mime::XML)
+ActiveSupport::JSON.backend = "JSONGem" 
